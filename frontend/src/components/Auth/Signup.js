@@ -10,7 +10,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/auth/signup", formData);
+      await axios.post("https://car-management-system-api.vercel.app/auth/signup", formData);
       alert("Signup successful! Please log in.");
       navigate("/");
     } catch (error) {

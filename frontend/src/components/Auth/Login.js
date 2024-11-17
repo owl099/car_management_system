@@ -10,7 +10,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("/auth/login", formData);
+      const { data } = await axios.post("https://car-management-system-api.vercel.app/auth/login", formData);
       localStorage.setItem("token", data.token);
       navigate("/cars");
     } catch (error) {

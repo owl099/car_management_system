@@ -17,7 +17,7 @@ const CarDetail = () => {
         const token = localStorage.getItem("token");
         if (!token) throw new Error("You are not authorized. Please log in.");
 
-        const { data } = await axios.get(`/cars/${id}`, {
+        const { data } = await axios.get(`https://car-management-system-api.vercel.app/cars/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setCar(data);
@@ -36,7 +36,7 @@ const CarDetail = () => {
       const token = localStorage.getItem("token");
       if (!token) throw new Error("You are not authorized. Please log in.");
 
-      await axios.delete(`/cars/${id}`, {
+      await axios.delete(`https://car-management-system-api.vercel.app/cars/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Car deleted successfully!");

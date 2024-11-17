@@ -23,7 +23,7 @@ const CarForm = () => {
       const fetchCar = async () => {
         try {
           const token = localStorage.getItem("token");
-          const { data } = await axios.get(`/cars/${id}`, {
+          const { data } = await axios.get(`https://car-management-system-api.vercel.app/cars/${id}`, {
             headers: { Authorization: `Bearer ${token}` },
           });
           setFormData({

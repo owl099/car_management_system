@@ -10,7 +10,7 @@ const CarList = () => {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        const { data } = await axios.get("/cars");
+        const { data } = await axios.get("https://car-management-system-api.vercel.app/cars");
         setCars(data);
       } catch (error) {
         alert("Failed to fetch cars.");
@@ -22,7 +22,7 @@ const CarList = () => {
   const handleSearch = async () => {
     try {
       const token = localStorage.getItem("token");
-      const { data } = await axios.get(`/cars/search?q=${search}`, {
+      const { data } = await axios.get(`https://car-management-system-api.vercel.app/cars/search?q=${search}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCars(data);
