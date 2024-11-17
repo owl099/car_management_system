@@ -40,7 +40,7 @@ const CarDetail = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("Car deleted successfully!");
-      navigate("https://car-management-system-api.vercel.app/cars");
+      navigate("/cars");
     } catch (error) {
       console.error("Error deleting car:", error);
       alert(error.response?.data?.message || "Failed to delete car.");
@@ -66,7 +66,7 @@ const CarDetail = () => {
 
   return (
     <div className="car-detail-container">
-      <button className="back-button" onClick={() => navigate("https://car-management-system-api.vercel.app/cars")}>
+      <button className="back-button" onClick={() => navigate("/cars")}>
         &larr; Back to Cars
       </button>
       <div className="car-detail">
@@ -94,7 +94,7 @@ const CarDetail = () => {
           <div className="action-buttons">
             <button
               className="edit-button"
-              onClick={() => navigate(`https://car-management-system-api.vercel.app/cars/edit/${id}`)}
+              onClick={() => navigate(`/cars/edit/${id}`)}
             >
               Edit
             </button>
