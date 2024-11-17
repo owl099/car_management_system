@@ -95,13 +95,13 @@ const CarForm = () => {
       if (!token) throw new Error("You are not authorized. Please log in.");
 
       if (id) {
-        await axios.put(`https://car-management-system-api.vercel.app/cars/${id}`, payload, {
+        await axios.put(`/cars/${id}`, payload, {
           headers: { Authorization: `Bearer ${token}` },
           body: JSON.stringify(token)
         });
         alert("Car updated successfully!");
       } else {
-        await axios.post("https://car-management-system-api.vercel.app/cars", payload, {
+        await axios.post("/cars", payload, {
           headers: { Authorization: `Bearer ${token}` },
           body: JSON.stringify(token)
         });
