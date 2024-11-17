@@ -1,0 +1,20 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment folder
+venv/
+
+# Ignore migrations (if auto-generated or not needed)
+migrations/
+
+# Ignore other common unwanted files
+*.log
+*.sqlite3
+*.env
+.DS_Store
+
+# Ignore system-specific files
+Thumbs.db

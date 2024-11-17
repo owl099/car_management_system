@@ -1,0 +1,279 @@
+/* General Container */
+.car-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Background */
+.car-detail-container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://wallpaperaccess.com/full/5338955.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(3px);
+    opacity: 0.9; /* Adjust for desired brightness */
+}
+
+/* Backdrop Overlay */
+.car-detail-container::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    z-index: -1;
+    filter: blur(2px);
+}
+
+/* Back Button */
+.back-button {
+    background: rgba(50, 50, 50, 0.8);
+    color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background: rgba(70, 70, 70, 0.9);
+    transform: scale(1.05);
+}
+
+/* Car Detail Section */
+.car-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background: rgba(40, 40, 40, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.car-image-wrapper {
+    flex: 1 1 40%;
+    max-width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Details Section */
+.car-details-content {
+    flex: 1 1 55%;
+    padding: 20px;
+    color: #ddd;
+}
+
+.car-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.car-description {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.car-tags ul {
+    list-style: none;
+    padding: 0;
+}
+
+.car-tags li {
+    background: rgba(70, 70, 70, 0.8);
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.edit-button {
+    background: rgba(255, 165, 0, 0.8);
+    color: white;
+}
+
+.edit-button:hover {
+    background: rgba(255, 165, 0, 1);
+    transform: scale(1.05);
+}
+
+.delete-button {
+    background: rgba(220, 53, 69, 0.8);
+    color: white;
+}
+
+.delete-button:hover {
+    background: rgba(220, 53, 69, 1);
+    transform: scale(1.05);
+}
+
+/* Image Gallery */
+.image-gallery {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.gallery-image {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* Modal for Enlarged Image */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 120px);
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.nav-button {
+    background: rgba(50, 50, 50, 0.8);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(70, 70, 70, 0.9);
+    transform: scale(1.05);
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(220, 53, 69, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.close-button:hover {
+    background: rgba(220, 53, 69, 1);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .car-detail {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .modal-image {
+        max-height: 80vh;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
