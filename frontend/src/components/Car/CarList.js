@@ -60,7 +60,7 @@ const CarList = () => {
               <div className="car-tile-content">
                 <h5 className="car-title">{car.title}</h5>
                 <p className="car-description">{car.description}</p>
-                <Link to={`https://car-management-system-api.vercel.app/cars/${car._id}`} className="btn btn-primary">
+                <Link to={`/cars/${car._id}`} className="btn btn-primary">
                   View Details
                 </Link>
               </div>
@@ -68,7 +68,7 @@ const CarList = () => {
           ))}
         </div>
         <div className="text-center mt-4">
-          <Link to="https://car-management-system-api.vercel.app/cars/add" className="btn btn-success">
+          <Link to="/cars/add" className="btn btn-success">
             Add New Car
           </Link>
         </div>
