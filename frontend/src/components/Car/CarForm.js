@@ -103,7 +103,7 @@ const CarForm = () => {
         alert("Car updated successfully!");
       }
        else {
-        await axios.post('https://car-management-system-api.vercel.app/cars', payload, {
+        await axios.post('https://car-management-system-api.vercel.app/cars/', payload, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
