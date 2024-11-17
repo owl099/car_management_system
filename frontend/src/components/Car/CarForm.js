@@ -107,7 +107,7 @@ const CarForm = () => {
         });
         alert("Car added successfully!");
       }
-      navigate("https://car-management-system-api.vercel.app/cars");
+      navigate("/cars");
     } catch (error) {
       console.error("Error saving car:", error);
       setError(error.response?.data?.message || "Failed to save car.");
