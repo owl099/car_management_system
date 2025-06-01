@@ -10,7 +10,7 @@ CORS(app, resources={r"/*": {"origins": "*"}})  # Allows all origins for testing
 
 # MongoDB Configuration
 app.config["MONGO_URI"] = "mongodb+srv://doragan079:q4jxpxoj2qDKpS7k@cluster0.sh6tj.mongodb.net/car_management?retryWrites=true&w=majority&appName=Cluster0"
-# app.config["MONGO_URI"] = "mongodb+srv://doragan079:Gfh4hs7fft2_5gg@cluster0.sh6tj.mongodb.net/car_management?retryWrites=true&w=majority&appName=Cluster0
+
 mongo.init_app(app)
 
 # Import routes
