@@ -5,7 +5,8 @@ from utils.mongo_config import mongo
 app = Flask(__name__)
 
 # Enable CORS for all routes and origins
-CORS(app, resources={r"/*": {"origins": "*"}})  # Allows all origins for testing purposes
+# CORS(app, resources={r"/*": {"origins": "*"}})  # Allows all origins for testing purposes
+CORS(app, origins=["https://car-management-system-smoky.vercel.app"])
 
 # MongoDB Configuration
 # app.config["MONGO_URI"] = "mongodb+srv://doragan079:q4jxpxoj2qDKpS7k@cluster0.sh6tj.mongodb.net/car_management?retryWrites=true&w=majority&appName=Cluster0"
