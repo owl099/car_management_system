@@ -14,7 +14,10 @@ CORS(app, resources={r"/*": {"origins": "*"}})  # Allows all origins for testing
 # CORS(app, origins=["https://car-management-system-smoky.vercel.app"])
 
 # MongoDB Configuration
-app.config["MONGO_URI"] = os.getenv("MONGO_URI")
+MONGO_URI = os.getenv("MONGO_URI")
+if not MONGO_URI:
+    raise ValueError("MONGO_URI environment variable not set!")
+app.config["MONGO_URI"] = MONGO_URI
 
 
 mongo.init_app(app)
