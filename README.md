@@ -1,0 +1,1 @@
+This is a practice project to learn how to build a basic car management system using RESTful APIs. The app lets you add, view, update, and delete car details. It helps understand how frontend and backend communicate through API calls and how data is managed in a simple database.
